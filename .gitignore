@@ -1,0 +1,51 @@
+# ==========================================
+# GitIgnore — Projeto Godoy Corretor
+# ==========================================
+
+# Arquivos de Imagem e Vídeo (pesados)
+*.png
+*.jpg
+*.jpeg
+*.webp
+*.gif
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Pastas locais de fotos de imóveis e templates brutos
+Apartamento Villaggio Manguinhos/
+Casa Cidade Continental/
+Casa Colina de Laranjeiras/
+Casa Jacaraipe/
+Casa São Mateus/
+Casa terreno Morada Laranjeiras/
+Condominio Sevilha Clube/
+Condominio Via Mar/
+Condomio Dream Park/
+Imovel Paradiso Clube Residence/
+Imovel Viver Serra/
+Naturalle - Morada de Laranjeiras/
+Paradiso Condominio Clube/
+Residencial Hz Praia grande/
+Taquara 2/
+Templates e logos/
+imoveis/
+dist-imoveis/
+
+# Arquivos e diretórios de Terraform
+**/.terraform/*
+**/*.tfstate
+**/*.tfstate.*
+**/*.tfplan
+**/backend.hcl
+**/terraform.tfvars
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+
+# Sistema Operacional e IDEs
+.DS_Store
+Thumbs.db
+.vscode/

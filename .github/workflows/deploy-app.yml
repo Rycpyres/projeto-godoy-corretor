@@ -1,0 +1,62 @@
+name: Deploy App (Godoy Corretor Web Frontend)
+
+# Este workflow é acionado automaticamente em qualquer push na branch 'main' que altere a pasta web/
+# Ele sincroniza os arquivos estáticos diretamente no S3 e invalida o cache do CloudFront sem rodar Terraform.
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/deploy-app.yml'
+  workflow_dispatch: {}
+
+env:
+  S3_BUCKET: godoy-corretor-prod-site
+  AWS_REGION: us-east-1
+  CUSTOM_DOMAIN: godoy.otcloudsolutions.com.br
+
+jobs:
+  deploy:
+    name: Sincronizar Web no S3 & Invalidar CDN
+    runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
+    steps:
+      - name: Checkout do Repositório
+        uses: actions/checkout@v4
+
+      - name: Configurar Credenciais AWS via OIDC
+        uses: aws-actions/configure-aws-credentials@v5
+        with:
+          role-to-assume: arn:aws:iam::814294708398:role/github-actions
+          role-session-name: github-actions-godoy-app-deploy
+          aws-region: ${{ env.AWS_REGION }}
+
+      - name: Sincronizar pasta ./web com o Bucket S3
+        run: |
+          if ! aws s3 ls "s3://${{ env.S3_BUCKET }}" 2>/dev/null; then
+            echo "Bucket ${{ env.S3_BUCKET }} ainda não existe no momento. O workflow de infra (deploy-infra.yml) fará a criação e o sync inicial."
+            exit 0
+          fi
+          aws s3 sync ./web s3://${{ env.S3_BUCKET }} \
+            --delete \
+            --exclude "imoveis/*" \
+            --cache-control "no-cache, must-revalidate"
+
+      - name: Descobrir ID da Distribuição CloudFront e Invalidar Cache
+        run: |
+          DIST_ID=$(aws cloudfront list-distributions --query "DistributionList.Items[?Aliases.Items!=null && contains(Aliases.Items, '${{ env.CUSTOM_DOMAIN }}')].Id | [0]" --output text)
+          if [ "$DIST_ID" != "None" ] && [ -n "$DIST_ID" ]; then
+            echo "Iniciando invalidação na distribuição: $DIST_ID"
+            aws cloudfront create-invalidation --distribution-id "$DIST_ID" --paths "/*"
+          else
+            echo "Aviso: Distribuição com alias ${{ env.CUSTOM_DOMAIN }} não encontrada ou ainda provisionando."
+          fi
+
+      - name: Status do Deploy
+        run: |
+          echo "========================================================"
+          echo "✅ Deploy de conteúdo concluído!"
+          echo "🔗 Acesse em: https://${{ env.CUSTOM_DOMAIN }}/index.html"
+          echo "========================================================"

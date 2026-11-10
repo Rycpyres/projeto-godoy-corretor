@@ -1,0 +1,900 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godoy Corretor — Imóveis Selecionados na Grande Vitória | CRECI 15775-F</title>
+    <meta name="description" content="Eder Godoy (CRECI 15775-F) — Corretor de imóveis na Serra, Vitória, Vila Velha e Litoral ES. Casas, apartamentos em condomínio clube e investimentos com atendimento consultivo direto.">
+    <meta name="keywords" content="corretor de imóveis serra es, apartamento manguinhos, morada de laranjeiras, colina de laranjeiras, imóveis grande vitória, eder godoy corretor, creci 15775-f">
+    <meta property="og:title" content="Godoy Corretor — Curadoria Imobiliária na Grande Vitória | ES">
+    <meta property="og:description" content="Atendimento direto e consultivo, do primeiro contato à escritura. Confira apartamentos, casas e condomínios verificados na Serra, Vitória e Vila Velha.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://godoy.otcloudsolutions.com.br">
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect rx='18' width='100' height='100' fill='%230A3F50'/%3E%3Csvg x='12' y='16' width='76' height='68' viewBox='30 100 430 340'%3E%3Cg fill='none' stroke='%23C7A46A' stroke-width='26' stroke-linecap='square' stroke-linejoin='miter'%3E%3Cpath d='M 55 315 L 260 115 L 445 315'/%3E%3Cpath d='M 148 185 L 148 135'/%3E%3Cpath d='M 270 185 L 345 260'/%3E%3Cpath d='M 148 245 L 148 425 L 365 425 L 365 295 L 255 295'/%3E%3Cpath d='M 260 185 L 188 255 L 188 385 L 325 385 L 325 335 L 285 335'/%3E%3C/g%3E%3C/svg%3E%3C/svg%3E">
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- SCHEMA.ORG JSON-LD PARA SEO LOCAL & GOOGLE MEU NEGÓCIO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "RealEstateAgent",
+      "name": "Godoy Corretor de Imóveis — Eder Godoy",
+      "identifier": "CRECI 15775-F",
+      "url": "https://godoy.otcloudsolutions.com.br",
+      "telephone": "+55-27-99904-2024",
+      "priceRange": "R$ 260.000 - R$ 1.500.000",
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Serra",
+        "addressRegion": "ES",
+        "addressCountry": "BR"
+      },
+      "areaServed": [
+        { "@type": "City", "name": "Serra" },
+        { "@type": "City", "name": "Vitória" },
+        { "@type": "City", "name": "Vila Velha" },
+        { "@type": "City", "name": "Fundão" }
+      ],
+      "sameAs": [
+        "https://instagram.com/godoy_corretor31"
+      ]
+    }
+    </script>
+</head>
+<body>
+
+<!-- TOP NAVIGATION BAR -->
+<nav class="nav">
+    <div class="nav-inner">
+        <a class="nav-logo" href="#" onclick="switchView('storefront')">
+            <div class="g-mark">
+                <svg viewBox="30 100 430 340" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                    <g fill="none" stroke="currentColor" stroke-width="24" stroke-linecap="square" stroke-linejoin="miter">
+                        <path d="M 55 315 L 260 115 L 445 315"/>
+                        <path d="M 148 185 L 148 135"/>
+                        <path d="M 270 185 L 345 260"/>
+                        <path d="M 148 245 L 148 425 L 365 425 L 365 295 L 255 295"/>
+                        <path d="M 260 185 L 188 255 L 188 385 L 325 385 L 325 335 L 285 335"/>
+                    </g>
+                </svg>
+            </div>
+            <div>GODOY<span>CORRETOR · CRECI 15775-F</span></div>
+        </a>
+
+        <ul class="nav-links" id="storefrontNavLinks">
+            <li><a href="#imoveis" onclick="switchView('storefront')">Imóveis</a></li>
+            <li><a href="#mapa" onclick="switchView('storefront')">Mapa ES</a></li>
+            <li><a href="#simulador" onclick="switchView('storefront')">Simulador</a></li>
+            <li><a href="#curadoria" onclick="switchView('storefront')">Anunciar Imóvel</a></li>
+            <li><a href="#quiz" onclick="switchView('storefront')">Quiz</a></li>
+            <li><a href="#sobre" onclick="switchView('storefront')">Sobre</a></li>
+            <li><a href="#contato" onclick="switchView('storefront')">Contato</a></li>
+        </ul>
+
+        <div class="nav-actions">
+            <button class="btn-admin-toggle" id="btnToggleAdmin" onclick="toggleAdminView()">
+                ⚡ Painel Gestor
+                <span class="lead-badge-count" id="navLeadCount">5</span>
+            </button>
+            <a href="#" target="_blank" class="nav-cta js-wpp" data-msg="Olá Godoy! Vim pelo site e gostaria de atendimento consultivo.">WhatsApp</a>
+            <button class="hamburger" onclick="toggleMobile()" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </div>
+</nav>
+
+<!-- MOBILE DRAWER MENU -->
+<div class="mobile-menu" id="mobileMenu">
+    <a href="#imoveis" onclick="switchView('storefront'); toggleMobile()">🏠 Imóveis Disponíveis</a>
+    <a href="#mapa" onclick="switchView('storefront'); toggleMobile()">🗺️ Mapa da Grande Vitória</a>
+    <a href="#simulador" onclick="switchView('storefront'); toggleMobile()">🧮 Simulador de Financiamento</a>
+    <a href="#curadoria" onclick="switchView('storefront'); toggleMobile()">✨ Curadoria & Anunciar Imóvel</a>
+    <a href="#quiz" onclick="switchView('storefront'); toggleMobile()">🎯 Quiz: Imóvel Ideal</a>
+    <a href="#contato" onclick="switchView('storefront'); toggleMobile()">✉️ Contato Direto</a>
+    <button onclick="toggleAdminView(); toggleMobile()" style="color:var(--gold-light);font-weight:800;">⚡ Abrir Painel Gestor (CRM & Imóveis)</button>
+</div>
+
+<!-- =========================================================
+     PUBLIC STOREFRONT VIEW
+     ========================================================= -->
+<main id="publicStorefront">
+
+    <!-- CINEMATIC KEN BURNS HERO -->
+    <section class="hero-cinematic">
+        <div class="hero-slides" id="heroSlides">
+            <div class="hero-slide active" style="background-image:url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=1600&q=80')"></div>
+            <div class="hero-slide" style="background-image:url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1600&q=80')"></div>
+        </div>
+        <div class="hero-overlay"></div>
+
+        <div class="hero-container">
+            <div class="hero-grid">
+                <div>
+                    <div class="hero-live-pill">
+                        <span class="pulse-dot"></span>
+                        <span>CRECI 15775-F · Curadoria Verificada na Grande Vitória / ES</span>
+                    </div>
+                    <h1>Imóveis selecionados com a segurança de quem conhece cada bairro da <em>Grande Vitória</em>.</h1>
+                    <p class="hero-sub">Atendimento direto com <strong>Eder Godoy</strong>, sem intermediários: do primeiro filtro até a assinatura da escritura. Visitas presenciais verificadas na Serra, Vitória, Vila Velha e Litoral.</p>
+                    <div class="hero-btns">
+                        <a href="#imoveis" class="btn btn-gold">Explorar Vitrine de Imóveis</a>
+                        <a href="#simulador" class="btn btn-glass">🧮 Simular Financiamento</a>
+                        <a href="#curadoria" class="btn btn-glass">🏷️ Quero Vender Meu Imóvel</a>
+                    </div>
+                </div>
+
+                <!-- HERO SPOTLIGHT PROPERTY -->
+                <div class="hero-spotlight-card" onclick="openModal(0)" style="cursor:pointer;">
+                    <div class="spotlight-img-wrap">
+                        <img src="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=900&q=80" alt="Paradiso Clube Residence - Serra ES">
+                        <span class="spotlight-tag">⭐ Destaque Verificado · Serra</span>
+                    </div>
+                    <div style="font-size:11px;color:var(--gold-light);text-transform:uppercase;font-weight:700;letter-spacing:1px;">Oportunidade em Andar Alto</div>
+                    <h3 style="font-size:21px;margin:4px 0;">Paradiso Clube Residence</h3>
+                    <p style="font-size:13px;color:rgba(255,255,255,0.75);">📍 Morada de Laranjeiras, Serra · 2 Quartos (1 Suíte) · 62m² · Lazer Clube Completo</p>
+                    <div class="spotlight-meta">
+                        <div>
+                            <span style="font-size:11px;opacity:0.7;display:block;">Investimento</span>
+                            <span class="spotlight-price">R$ 555.000</span>
+                        </div>
+                        <span class="btn btn-gold" style="padding:10px 18px;font-size:12px;">Ver Galeria →</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FLOATING GLASSMORPHIC SEARCH HUD -->
+            <div class="search-hud">
+                <div class="hud-field">
+                    <label for="hudRegion">📍 Cidade / Região</label>
+                    <select id="hudRegion">
+                        <option value="Todos">Todas as Regiões (Grande Vitória)</option>
+                        <option value="Serra">Serra (Manguinhos, Laranjeiras, Jacaraípe)</option>
+                        <option value="Vitória">Vitória (Enseada, Camburi)</option>
+                        <option value="Vila Velha">Vila Velha (Praia da Costa, Itaparica)</option>
+                        <option value="Litoral">Litoral (Praia Grande, São Mateus)</option>
+                    </select>
+                </div>
+                <div class="hud-field">
+                    <label for="hudType">🏠 Tipo de Imóvel</label>
+                    <select id="hudType">
+                        <option value="Todos">Todos os Tipos</option>
+                        <option value="Apartamento">Apartamento / Condomínio Clube</option>
+                        <option value="Casa">Casa Residencial / Condomínio</option>
+                        <option value="Cobertura">Cobertura / Alto Padrão</option>
+                    </select>
+                </div>
+                <div class="hud-field">
+                    <label for="hudBudget">💰 Faixa de Investimento</label>
+                    <select id="hudBudget">
+                        <option value="Todos">Qualquer faixa de valor</option>
+                        <option value="ate350">Até R$ 350.000</option>
+                        <option value="350a650">De R$ 350.000 a R$ 650.000</option>
+                        <option value="acima650">Acima de R$ 650.000</option>
+                    </select>
+                </div>
+                <button class="btn btn-gold" onclick="executeHudSearch()" style="height:48px;">
+                    🔍 Filtrar Imóveis
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- CREDIBILITY BAR -->
+    <section class="cred-bar">
+        <div class="cred-inner">
+            <div class="cred-item"><div class="num" data-target="15">0</div><div class="label">Empreendimentos em Carteira</div></div>
+            <div class="cred-item"><div class="num" data-target="100">0</div><div class="label">% Imóveis Vistoriados</div></div>
+            <div class="cred-item"><div class="num" data-target="5">0</div><div class="label">Minutos Tempo Médio de Resposta</div></div>
+            <div class="cred-item"><div class="num" data-target="98">0</div><div class="label">% Clientes Satisfeitos</div></div>
+        </div>
+    </section>
+
+    <!-- PROPERTY SHOWCASE -->
+    <section class="section" id="imoveis">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Portfólio Selecionado</span>
+            <h2>Vitrine de Imóveis Disponíveis</h2>
+            <p>Imóveis reais captados e conferidos na Grande Vitória. Clique em qualquer card para abrir a ficha técnica, galeria de fotos e agendar visita.</p>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="catalog-toolbar">
+            <div class="filters" id="propertyFilters"></div>
+            <div class="catalog-count" id="catalogCountBadge">Exibindo 15 imóveis</div>
+        </div>
+
+        <div class="props-grid" id="propsGrid"></div>
+    </section>
+
+    <!-- INTERACTIVE MAP OF GRANDE VITÓRIA -->
+    <section class="section section-dark" id="mapa">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Inteligência Geográfica ES</span>
+            <h2>Explore por Região na Grande Vitória</h2>
+            <p>Clique em um polo urbano no mapa tático para visualizar indicadores de valorização, bairros atendidos e filtrar os imóveis da região.</p>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="map-layout reveal">
+            <div class="map-canvas-box">
+                <svg class="map-svg" viewBox="0 0 500 420" xmlns="http://www.w3.org/2000/svg" aria-label="Mapa Interativo da Grande Vitória">
+                    <!-- Costline background grid -->
+                    <defs>
+                        <pattern id="mapGrid" width="25" height="25" patternUnits="userSpaceOnUse">
+                            <path d="M 25 0 L 0 0 0 25" fill="none" stroke="rgba(199,164,106,0.08)" stroke-width="1"/>
+                        </pattern>
+                    </defs>
+                    <rect width="500" height="420" fill="url(#mapGrid)" rx="16"/>
+                    <text x="380" y="390" fill="rgba(199,164,106,0.35)" font-size="11" font-weight="700" letter-spacing="2">OCEANO ATLÂNTICO</text>
+
+                    <!-- LITORAL NORTE / FUNDÃO -->
+                    <path id="zone-Litoral" class="map-zone" onclick="selectMapRegion('Litoral')" d="M 190 25 L 345 25 L 360 105 L 205 115 Z"/>
+                    <!-- SERRA -->
+                    <path id="zone-Serra" class="map-zone active" onclick="selectMapRegion('Serra')" d="M 145 120 L 345 110 L 330 230 L 155 225 Z"/>
+                    <!-- VITÓRIA -->
+                    <path id="zone-Vitória" class="map-zone" onclick="selectMapRegion('Vitória')" d="M 195 235 L 320 235 L 310 300 L 200 295 Z"/>
+                    <!-- VILA VELHA -->
+                    <path id="zone-Vila Velha" class="map-zone" onclick="selectMapRegion('Vila Velha')" d="M 165 305 L 305 305 L 290 395 L 155 385 Z"/>
+
+                    <!-- PINS -->
+                    <g class="map-pin" onclick="selectMapRegion('Litoral')">
+                        <circle class="pin-outer" cx="280" cy="70" r="16"/>
+                        <circle class="pin-inner" cx="280" cy="70" r="6"/>
+                        <text x="298" y="74" fill="#fff" font-size="12" font-weight="700">Litoral / Praia Grande</text>
+                    </g>
+                    <g class="map-pin active" onclick="selectMapRegion('Serra')">
+                        <circle class="pin-outer" cx="255" cy="170" r="18"/>
+                        <circle class="pin-inner" cx="255" cy="170" r="7"/>
+                        <text x="275" y="168" fill="#DFBE86" font-size="13" font-weight="800">SERRA (Polo Principal)</text>
+                        <text x="275" y="184" fill="rgba(255,255,255,0.75)" font-size="10">Manguinhos · Laranjeiras · Jacaraípe</text>
+                    </g>
+                    <g class="map-pin" onclick="selectMapRegion('Vitória')">
+                        <circle class="pin-outer" cx="260" cy="268" r="16"/>
+                        <circle class="pin-inner" cx="260" cy="268" r="6"/>
+                        <text x="278" y="272" fill="#fff" font-size="12" font-weight="700">Vitória (Capital)</text>
+                    </g>
+                    <g class="map-pin" onclick="selectMapRegion('Vila Velha')">
+                        <circle class="pin-outer" cx="240" cy="348" r="16"/>
+                        <circle class="pin-inner" cx="240" cy="348" r="6"/>
+                        <text x="258" y="352" fill="#fff" font-size="12" font-weight="700">Vila Velha</text>
+                    </g>
+                </svg>
+            </div>
+
+            <div class="map-details-card">
+                <div class="map-region-tabs" id="mapRegionTabs">
+                    <button class="map-tab active" onclick="selectMapRegion('Serra')">📍 Serra</button>
+                    <button class="map-tab" onclick="selectMapRegion('Vitória')">📍 Vitória</button>
+                    <button class="map-tab" onclick="selectMapRegion('Vila Velha')">📍 Vila Velha</button>
+                    <button class="map-tab" onclick="selectMapRegion('Litoral')">📍 Litoral / Fundão</button>
+                </div>
+
+                <h3 id="mapRegionTitle" style="font-size:28px;color:var(--gold-light);margin-bottom:8px;">Serra — Eixo de Maior Crescimento</h3>
+                <p id="mapRegionDesc" style="font-size:14px;color:rgba(255,255,255,0.8);line-height:1.7;">Principal polo de expansão residencial e condomínios clube da Grande Vitória. Combina excelente custo por m², proximidade das praias de Manguinhos e Jacaraípe e forte comércio em Laranjeiras.</p>
+
+                <div class="map-kpis">
+                    <div class="map-kpi"><div class="val" id="mapKpiVal">+14,2%</div><div class="lbl">Valorização Anual</div></div>
+                    <div class="map-kpi"><div class="val" id="mapKpiM2">R$ 5.800</div><div class="lbl">Média m² Região</div></div>
+                    <div class="map-kpi"><div class="val" id="mapKpiCount">11</div><div class="lbl">Imóveis no Portfólio</div></div>
+                </div>
+
+                <div style="font-size:11px;text-transform:uppercase;letter-spacing:1px;color:var(--gold-light);margin-bottom:8px;font-weight:700;">Bairros em Destaque:</div>
+                <div class="map-bairros" id="mapBairrosList"></div>
+
+                <button class="btn btn-gold" style="width:100%;" onclick="filterByCurrentMapRegion()">
+                    🔍 Ver Imóveis Disponíveis nesta Região
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- FINANCING SIMULATOR -->
+    <section class="section" id="simulador">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Planejamento Financeiro</span>
+            <h2>Simulador de Financiamento Imobiliário</h2>
+            <p>Calcule em segundos a estimativa de entrada e parcelas (Caixa / SBPE) e envie sua simulação diretamente para avaliação de crédito sem custo.</p>
+            <div class="accent-line"></div>
+        </div>
+
+        <div class="sim-grid reveal">
+            <div>
+                <div class="sim-control">
+                    <div class="sim-control-head">
+                        <label for="simPrice">Valor do Imóvel</label>
+                        <span class="sim-val" id="simPriceDisplay">R$ 555.000</span>
+                    </div>
+                    <input type="range" id="simPrice" class="sim-range" min="200000" max="1500000" step="15000" value="555000" oninput="updateSimulator()">
+                </div>
+
+                <div class="sim-control">
+                    <div class="sim-control-head">
+                        <label for="simDown">Entrada (<span id="simDownPct">20</span>%)</label>
+                        <span class="sim-val" id="simDownDisplay">R$ 111.000</span>
+                    </div>
+                    <input type="range" id="simDown" class="sim-range" min="20" max="70" step="5" value="20" oninput="updateSimulator()">
+                </div>
+
+                <div class="sim-control">
+                    <div class="sim-control-head">
+                        <label for="simYears">Prazo de Financiamento</label>
+                        <span class="sim-val" id="simYearsDisplay">360 meses (30 anos)</span>
+                    </div>
+                    <input type="range" id="simYears" class="sim-range" min="120" max="420" step="60" value="360" oninput="updateSimulator()">
+                </div>
+
+                <p style="font-size:12px;color:var(--graphite-mid);">💡 <strong>Dica do Corretor:</strong> Você pode utilizar seu saldo de <strong>FGTS</strong> para abater parte da entrada ou reduzir o saldo financiado.</p>
+            </div>
+
+            <div class="sim-result-card">
+                <div>
+                    <div style="font-size:12px;font-weight:700;color:var(--gold-light);text-transform:uppercase;letter-spacing:1px;">Resultado Estimado (Tabela SAC · Taxa Ref. 9,89% a.a.)</div>
+                    <div class="sim-highlight">
+                        <div class="lbl">1ª Parcela Estimada</div>
+                        <div class="big-price" id="simFirstInstallment">R$ 4.890</div>
+                        <div style="font-size:12px;opacity:0.8;">Última parcela estimada: <strong id="simLastInstallment">R$ 1.245</strong></div>
+                    </div>
+
+                    <div class="sim-breakdown">
+                        <div class="sim-stat">
+                            <span>Valor Financiado</span>
+                            <strong id="simFinancedAmount">R$ 444.000</strong>
+                        </div>
+                        <div class="sim-stat">
+                            <span>Renda Familiar Sugerida</span>
+                            <strong id="simIncomeRequired">R$ 14.800</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="btn btn-gold" style="width:100%;" onclick="submitSimulationLead()">
+                    💬 Solicitar Aprovação de Crédito no WhatsApp
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- BEFORE & AFTER CURADORIA VISUAL (OWNER CAPTURE) -->
+    <section class="section" id="curadoria" style="background:var(--ice-dark);">
+        <div class="curadoria-grid reveal">
+            <div>
+                <span class="section-eyebrow">Para Proprietários · Venda Mais Rápido</span>
+                <h2 style="font-size:34px;color:var(--petrol);margin-bottom:16px;">Apresentação Impecável Valoriza o Seu Patrimônio</h2>
+                <p style="color:var(--graphite-mid);margin-bottom:18px;">Fotos escuras e anúncios sem informações claras afastam compradores qualificados e forçam descontos na negociação.</p>
+                <p style="color:var(--graphite-mid);margin-bottom:24px;">No <strong>Padrão Visual Godoy Corretor</strong>, seu imóvel recebe tratamento de cor profissional, direção de fotografia, vídeo formato Reels e destaque na vitrine e no Google.</p>
+                <div style="display:flex;gap:12px;flex-wrap:wrap;">
+                    <button class="btn btn-gold" onclick="openOwnerCaptureModal()">🏷️ Quero Anunciar Meu Imóvel com o Godoy</button>
+                </div>
+            </div>
+
+            <div>
+                <div class="ba-slider" id="baSlider">
+                    <img class="ba-img ba-after-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Depois — Tratamento Padrão Godoy">
+                    <div class="ba-before-wrap" id="baBeforeWrap">
+                        <img class="ba-img" src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1000&q=85" alt="Antes — Foto Comum Sem Tratamento">
+                    </div>
+                    <span class="ba-label before">Sem Curadoria</span>
+                    <span class="ba-label after">Padrão Godoy HDR</span>
+                    <div class="ba-handle" id="baHandle">↔</div>
+                    <input type="range" class="ba-range" min="5" max="95" value="50" oninput="moveBeforeAfter(this.value)" aria-label="Comparar antes e depois">
+                </div>
+                <p style="text-align:center;font-size:12px;color:var(--graphite-mid);margin-top:10px;">Arraste o controle deslizante para comparar a valorização visual.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section section-dark" id="quiz">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Curadoria Personalizada</span>
+            <h2>Encontre seu Imóvel Ideal em 30 Segundos</h2>
+            <p>Responda 3 perguntas rápidas para registrarmos seu perfil e enviarmos as 3 melhores fichas técnicas no seu WhatsApp.</p>
+            <div class="accent-line"></div>
+        </div>
+        <div class="quiz-box reveal">
+            <div class="quiz-progress"><div class="step done"></div><div class="step"></div><div class="step"></div></div>
+            <!-- Step 1 -->
+            <div class="quiz-step active" data-step="1">
+                <h3>1. Qual o seu objetivo principal?</h3>
+                <p>Escolha o que melhor descreve sua busca atual.</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-val="Morar com a família">🏡 Morar com a Família</div>
+                    <div class="quiz-opt" data-val="Investir com rentabilidade">📈 Investir para Renda/Valorização</div>
+                    <div class="quiz-opt" data-val="Segunda residência / Praia">🏖️ Lazer / Perto da Praia</div>
+                    <div class="quiz-opt" data-val="Vender meu imóvel">🏷️ Vender Meu Imóvel</div>
+                </div>
+                <div class="quiz-nav"><div></div><button class="btn btn-gold" onclick="quizNext()" disabled id="quizNext1">Próximo →</button></div>
+            </div>
+            <!-- Step 2 -->
+            <div class="quiz-step" data-step="2">
+                <h3>2. Qual a região de preferência?</h3>
+                <p>Selecione o município ou polo prioritário.</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-val="Serra (Manguinhos/Laranjeiras/Jacaraípe)">📍 Serra</div>
+                    <div class="quiz-opt" data-val="Vitória">📍 Vitória</div>
+                    <div class="quiz-opt" data-val="Vila Velha">📍 Vila Velha</div>
+                    <div class="quiz-opt" data-val="Litoral / Praia Grande">📍 Litoral / Praia Grande</div>
+                </div>
+                <div class="quiz-nav"><button class="btn btn-glass" onclick="quizPrev()">← Voltar</button><button class="btn btn-gold" onclick="quizNext()" disabled id="quizNext2">Próximo →</button></div>
+            </div>
+            <!-- Step 3 -->
+            <div class="quiz-step" data-step="3">
+                <h3>3. Qual a faixa de investimento pretendida?</h3>
+                <p>Informe o valor aproximado para selecionarmos as opções certas.</p>
+                <div class="quiz-options">
+                    <div class="quiz-opt" data-val="Até R$ 350 mil">Até R$ 350 mil</div>
+                    <div class="quiz-opt" data-val="R$ 350 mil a R$ 650 mil">R$ 350k a R$ 650k</div>
+                    <div class="quiz-opt" data-val="R$ 650 mil a R$ 1 milhão">R$ 650k a R$ 1M</div>
+                    <div class="quiz-opt" data-val="Acima de R$ 1 milhão">Acima de R$ 1M</div>
+                </div>
+                <div class="quiz-nav"><button class="btn btn-glass" onclick="quizPrev()">← Voltar</button><button class="btn btn-gold" onclick="quizSubmit()" disabled id="quizNext3">Receber Seleção no WhatsApp →</button></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- DIFFERENTIALS -->
+    <section class="section" id="diferenciais">
+        <div class="section-header reveal">
+            <span class="section-eyebrow">Compromisso & Autoridade</span>
+            <h2>Por que escolher o Godoy Corretor?</h2>
+            <p>Uma condução técnica, humana e transparente em todas as etapas da sua jornada imobiliária.</p>
+            <div class="accent-line"></div>
+        </div>
+        <div class="diff-grid">
+            <div class="diff-card reveal">
+                <div class="diff-icon">🔍</div>
+                <h3>Imóveis Vistoriados</h3>
+                <p>Cada imóvel é visitado e conferido pessoalmente antes de entrar na vitrine — valores reais e sem surpresas na visita.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">🤝</div>
+                <h3>Atendimento Consultivo</h3>
+                <p>Você fala diretamente com Eder Godoy do início ao fim. Sem pressão comercial e com foco total no seu objetivo.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">📍</div>
+                <h3>Domínio da Grande Vitória</h3>
+                <p>Conhecimento prático de liquidez, segurança e valorização nos principais condomínios da Serra, Vitória e Vila Velha.</p>
+            </div>
+            <div class="diff-card reveal">
+                <div class="diff-icon">🔒</div>
+                <h3>Segurança até a Escritura</h3>
+                <p>Análise criteriosa de documentação, certidões, financiamento bancário e contrato até a entrega das chaves.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="section" id="sobre" style="background:var(--white);">
+        <div class="about-grid">
+            <div class="about-photo reveal">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=900&q=80" alt="Eder Godoy — Corretor de Imóveis CRECI 15775-F">
+            </div>
+            <div class="about-text reveal">
+                <span class="section-eyebrow">Sobre o Especialista</span>
+                <h2 style="font-size:34px;color:var(--petrol);margin-bottom:16px;">Eder Godoy · CRECI 15775-F</h2>
+                <p style="color:var(--graphite-mid);margin-bottom:14px;">Corretor de imóveis atuante na Grande Vitória / ES, especializado em imóveis residenciais, condomínios clube na Serra (Morada de Laranjeiras, Manguinhos, Colina, Jacaraípe) e oportunidades de investimento no litoral capixaba.</p>
+                <p style="color:var(--graphite-mid);margin-bottom:18px;">Acredito que a apresentação de um imóvel deve ter o mesmo rigor e transparência que a negociação jurídica. Por isso, acompanho pessoalmente cada cliente desde a simulação de financiamento até o registro em cartório.</p>
+                <div class="about-details">
+                    <div class="about-detail">📋 CRECI 15775-F Ativo</div>
+                    <div class="about-detail">📍 Serra & Grande Vitória / ES</div>
+                    <div class="about-detail">🏦 Assessoria Caixa & SBPE</div>
+                </div>
+                <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;">
+                    <a href="https://instagram.com/godoy_corretor31" target="_blank" class="btn btn-outline">📸 @godoy_corretor31</a>
+                    <a href="#" target="_blank" class="btn btn-gold js-wpp" data-msg="Olá Eder Godoy! Vi seu perfil no site e gostaria de conversar.">💬 Falar Direto com o Godoy</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section" id="contato">
+        <div class="contact-grid">
+            <div class="contact-info reveal">
+                <span class="section-eyebrow">Canais Diretos</span>
+                <h2 style="font-size:34px;color:var(--petrol);margin-bottom:14px;">Vamos agendar uma conversa?</h2>
+                <p style="color:var(--graphite-mid);">Ao preencher o formulário ao lado, sua solicitação entra imediatamente na fila prioritária de atendimento e você também pode iniciar a conversa no WhatsApp.</p>
+                <div class="contact-channels">
+                    <a href="#" target="_blank" class="channel js-wpp" data-msg="Olá Godoy! Vim pelo site.">
+                        <div class="channel-icon">💬</div>
+                        <div class="channel-text"><div style="font-size:11px;font-weight:700;color:var(--graphite-mid);text-transform:uppercase;">WhatsApp Direto</div><div style="font-size:15px;font-weight:800;color:var(--petrol);">(27) 99904-2024</div></div>
+                    </a>
+                    <a href="https://instagram.com/godoy_corretor31" target="_blank" class="channel">
+                        <div class="channel-icon">📸</div>
+                        <div class="channel-text"><div style="font-size:11px;font-weight:700;color:var(--graphite-mid);text-transform:uppercase;">Instagram Oficial</div><div style="font-size:15px;font-weight:800;color:var(--petrol);">@godoy_corretor31</div></div>
+                    </a>
+                    <div class="channel">
+                        <div class="channel-icon">📍</div>
+                        <div class="channel-text"><div style="font-size:11px;font-weight:700;color:var(--graphite-mid);text-transform:uppercase;">Atuação Presencial</div><div style="font-size:15px;font-weight:800;color:var(--petrol);">Serra, Vitória, Vila Velha & Litoral ES</div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-card reveal">
+                <h3 style="font-family:'Montserrat',sans-serif;font-size:20px;font-weight:800;color:var(--petrol);margin-bottom:20px;">Envie seu Interesse (integrado ao CRM)</h3>
+                <form id="contactForm" onsubmit="handleForm(event)">
+                    <div class="form-row">
+                        <div class="form-group"><label for="name">Nome Completo</label><input type="text" id="name" placeholder="Ex: João Silva" required></div>
+                        <div class="form-group"><label for="phone">WhatsApp</label><input type="tel" id="phone" placeholder="(27) 99999-9999" required></div>
+                    </div>
+                    <div class="form-group"><label for="email">E-mail (opcional)</label><input type="email" id="email" placeholder="seuemail@exemplo.com"></div>
+                    <div class="form-group"><label for="objective">Objetivo</label>
+                        <select id="objective" required>
+                            <option value="">Selecione...</option>
+                            <option>Comprar imóvel para moradia</option>
+                            <option>Anunciar / Vender meu imóvel</option>
+                            <option>Investir na Grande Vitória</option>
+                            <option>Simular financiamento bancário</option>
+                        </select>
+                    </div>
+                    <div class="form-group"><label for="message">Bairro ou Imóvel de Interesse</label><textarea id="message" placeholder="Ex: Tenho interesse no Paradiso Clube ou apartamentos de 2 quartos em Manguinhos..." rows="3"></textarea></div>
+                    <button type="submit" class="btn btn-gold" style="width:100%;">Enviar e Abrir Atendimento →</button>
+                </form>
+                <div class="form-success" id="formSuccess">✅ Solicitação registrada no CRM! Redirecionando para o WhatsApp...</div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- =========================================================
+     PAINEL GERENCIAL INTEGRADO (CRM KANBAN + IMÓVEIS + ADS)
+     ========================================================= -->
+<section class="admin-panel-view" id="adminPanelView">
+    <div class="admin-container">
+        <div class="admin-header">
+            <div>
+                <span class="section-eyebrow">Godoy Intelligence Hub · Backoffice</span>
+                <h2 style="font-size:32px;color:var(--white);">Central Gerencial de Imóveis, CRM Kanban & Tráfego Pago</h2>
+                <p style="font-size:13.5px;color:rgba(255,255,255,0.7);">Cadastre imóveis na vitrine, acompanhe leads gerados no site em tempo real e gerencie campanhas do Meta Suite e Google Ads.</p>
+            </div>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+                <button class="btn btn-glass" onclick="resetDemoData()">🔄 Restaurar Dados Padrão</button>
+                <button class="btn btn-gold" onclick="switchView('storefront')">👁️ Voltar para Vitrine do Site</button>
+            </div>
+        </div>
+
+        <!-- EXECUTIVE KPIS -->
+        <div class="admin-kpis">
+            <div class="admin-kpi-card">
+                <div class="lbl">Leads Ativos no Pipeline</div>
+                <div class="val" id="admKpiLeads">5</div>
+                <div class="sub">🟢 Captados via Vitrine, Quiz e Ads</div>
+            </div>
+            <div class="admin-kpi-card">
+                <div class="lbl">VGV em Negociação</div>
+                <div class="val" id="admKpiVgv">R$ 2,84M</div>
+                <div class="sub">Potencial de comissão (5%): <span id="admKpiComm">R$ 142k</span></div>
+            </div>
+            <div class="admin-kpi-card">
+                <div class="lbl">Imóveis Publicados</div>
+                <div class="val" id="admKpiProps">15</div>
+                <div class="sub">Sincronizados com a vitrine pública</div>
+            </div>
+            <div class="admin-kpi-card">
+                <div class="lbl">Custo por Lead Médio (Ads)</div>
+                <div class="val">R$ 14,80</div>
+                <div class="sub">Meta Suite + Google Pesquisa Local</div>
+            </div>
+        </div>
+
+        <!-- ADMIN NAVIGATION TABS -->
+        <div class="admin-tabs">
+            <button class="admin-tab active" onclick="switchAdminTab('kanban', this)">📋 Pipeline CRM (Kanban de Leads)</button>
+            <button class="admin-tab" onclick="switchAdminTab('catalog', this)">🏠 Cadastrar / Editar Imóveis</button>
+            <button class="admin-tab" onclick="switchAdminTab('meta', this)">📣 Meta Business Suite (Instagram Ads)</button>
+            <button class="admin-tab" onclick="switchAdminTab('google', this)">🔍 Google Ads & Google Meu Negócio</button>
+        </div>
+
+        <!-- TAB 1: KANBAN CRM -->
+        <div class="admin-pane active" id="admPane-kanban">
+            <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:18px;flex-wrap:wrap;gap:12px;">
+                <p style="font-size:13px;color:rgba(255,255,255,0.75);">💡 Todo visitante que clica em um imóvel, responde o Quiz ou usa o Simulador entra automaticamente na coluna <strong>Novos Leads</strong>.</p>
+                <button class="btn btn-gold" style="padding:10px 18px;font-size:12px;" onclick="promptNewLead()">+ Adicionar Lead Manual</button>
+            </div>
+            <div class="kanban-board" id="kanbanBoard"></div>
+        </div>
+
+        <!-- TAB 2: PROPERTY CATALOG CRUD -->
+        <div class="admin-pane" id="admPane-catalog">
+            <div class="admin-catalog-grid">
+                <div class="admin-form-box">
+                    <h3 id="propFormTitle">➕ Cadastrar / Editar Imóvel</h3>
+                    <form id="adminPropForm" onsubmit="saveAdminProperty(event)">
+                        <input type="hidden" id="admPropId">
+                        <div class="admin-input-group">
+                            <label>Título do Anúncio</label>
+                            <input type="text" id="admPropTitle" placeholder="Ex: Apartamento Villaggio Manguinhos" required>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                            <div class="admin-input-group">
+                                <label>Região (Filtro)</label>
+                                <select id="admPropRegion" required>
+                                    <option value="Serra">Serra</option>
+                                    <option value="Vitória">Vitória</option>
+                                    <option value="Vila Velha">Vila Velha</option>
+                                    <option value="Litoral">Litoral</option>
+                                </select>
+                            </div>
+                            <div class="admin-input-group">
+                                <label>Tipo</label>
+                                <select id="admPropType" required>
+                                    <option value="Apartamento">Apartamento</option>
+                                    <option value="Casa">Casa</option>
+                                    <option value="Cobertura">Cobertura</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="admin-input-group">
+                            <label>Bairro / Localização Exibida</label>
+                            <input type="text" id="admPropLocation" placeholder="Ex: Manguinhos, Serra" required>
+                        </div>
+                        <div style="display:grid;grid-template-columns:1fr 1fr;gap:10px;">
+                            <div class="admin-input-group">
+                                <label>Preço Exibido</label>
+                                <input type="text" id="admPropPrice" placeholder="Ex: R$ 390.000" required>
+                            </div>
+                            <div class="admin-input-group">
+                                <label>Valor Numérico (R$)</label>
+                                <input type="number" id="admPropPriceNum" placeholder="390000" required>
+                            </div>
+                        </div>
+                        <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:10px;">
+                            <div class="admin-input-group"><label>Quartos</label><input type="number" id="admPropBeds" value="2" min="0" required></div>
+                            <div class="admin-input-group"><label>Vagas</label><input type="number" id="admPropPark" value="1" min="0" required></div>
+                            <div class="admin-input-group"><label>Área (m²)</label><input type="number" id="admPropArea" value="60" min="10" required></div>
+                        </div>
+                        <div class="admin-input-group">
+                            <label>Selo de Destaque</label>
+                            <select id="admPropBadge">
+                                <option value="real">IMÓVEL REAL (Verde)</option>
+                                <option value="exclusive">EXCLUSIVO (Dourado)</option>
+                                <option value="opportunity">OPORTUNIDADE (Azul Petróleo)</option>
+                                <option value="sold">VENDIDO (Prova Social)</option>
+                            </select>
+                        </div>
+                        <div class="admin-input-group">
+                            <label>URL da Foto Principal (S3 CloudFront ou CDN)</label>
+                            <input type="text" id="admPropImg" placeholder="https://... ou imoveis/pasta/01.webp" required>
+                        </div>
+                        <div class="admin-input-group">
+                            <label>Descrição Consultiva</label>
+                            <textarea id="admPropDesc" rows="3" placeholder="Descreva os pontos fortes, posição solar, lazer e condições..." required></textarea>
+                        </div>
+                        <div style="display:flex;gap:8px;margin-top:14px;">
+                            <button type="submit" class="btn btn-gold" style="flex:1;padding:12px;">💾 Salvar na Vitrine</button>
+                            <button type="button" class="btn btn-glass" onclick="resetPropForm()" style="padding:12px;">Limpar</button>
+                        </div>
+                    </form>
+                </div>
+
+                <div class="admin-table-wrap">
+                    <table class="admin-table">
+                        <thead>
+                            <tr>
+                                <th>Imóvel</th>
+                                <th>Região / Tipo</th>
+                                <th>Preço</th>
+                                <th>Status</th>
+                                <th>Ações Rápidas</th>
+                            </tr>
+                        </thead>
+                        <tbody id="adminPropsTableBody"></tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 3: META BUSINESS SUITE -->
+        <div class="admin-pane" id="admPane-meta">
+            <div class="ads-grid">
+                <div class="ads-box">
+                    <h3 style="color:var(--gold-light);margin-bottom:12px;">⚡ Gerador de Campanha Meta Ads (Instagram & Reels)</h3>
+                    <p style="font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:18px;">Selecione um imóvel da vitrine para gerar automaticamente o texto de anúncio persuasivo, segmentação de raio na Grande Vitória e link rastreado com UTM para o Gerenciador de Anúncios.</p>
+                    <div class="admin-input-group">
+                        <label>Escolha o Imóvel para Impulsionar</label>
+                        <select id="metaSelectProp" onchange="generateMetaAdCopy()"></select>
+                    </div>
+                    <div class="admin-input-group">
+                        <label>Objetivo da Campanha no Meta Suite</label>
+                        <select id="metaObjective" onchange="generateMetaAdCopy()">
+                            <option value="wpp">Cadastros / Mensagens Diretas no WhatsApp</option>
+                            <option value="traffic">Tráfego Qualificado para a Ficha no Site</option>
+                            <option value="reels">Engajamento em Reels (Raio 15km Grande Vitória)</option>
+                        </select>
+                    </div>
+                    <div class="admin-input-group">
+                        <label>Copy Pronta para o Anúncio (Instagram / Facebook)</label>
+                        <textarea id="metaGeneratedCopy" rows="6" readonly></textarea>
+                    </div>
+                    <div class="admin-input-group">
+                        <label>URL de Destino com Rastreamento UTM</label>
+                        <input type="text" id="metaGeneratedUtm" readonly>
+                    </div>
+                    <button class="btn btn-gold" style="width:100%;margin-top:8px;" onclick="copyMetaAd()">📋 Copiar Copy + Link Rastreado</button>
+                </div>
+
+                <div class="ads-box">
+                    <h3 style="color:var(--gold-light);margin-bottom:12px;">📊 Campanhas Ativas Sugeridas (Meta Ads)</h3>
+                    <div class="admin-table-wrap" style="margin-bottom:18px;">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Campanha</th>
+                                    <th>Orçamento/Dia</th>
+                                    <th>Leads</th>
+                                    <th>CPL</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>[Reels] Paradiso Clube · Serra</strong><br><span style="font-size:11px;opacity:0.7;">Público: 28-55 anos · Raio 12km Laranjeiras/Vitória</span></td>
+                                    <td>R$ 25/dia</td>
+                                    <td>18</td>
+                                    <td style="color:var(--emerald);font-weight:700;">R$ 13,80</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>[Carrossel] Villaggio Manguinhos</strong><br><span style="font-size:11px;opacity:0.7;">Interesses: Lazer, Praia, 1º Imóvel</span></td>
+                                    <td>R$ 20/dia</td>
+                                    <td>14</td>
+                                    <td style="color:var(--emerald);font-weight:700;">R$ 14,20</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>[Captação] Proprietários na Serra</strong><br><span style="font-size:11px;opacity:0.7;">Criativo: Comparador Antes/Depois Curadoria</span></td>
+                                    <td>R$ 15/dia</td>
+                                    <td>6 proprietários</td>
+                                    <td style="color:var(--gold-light);font-weight:700;">R$ 17,50</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div style="background:rgba(16,185,129,0.1);border:1px solid rgba(16,185,129,0.3);padding:14px;border-radius:12px;font-size:12.5px;">
+                        ✅ <strong>Integração Pixel Meta & API de Conversões:</strong> Qualquer clique nos botões de WhatsApp ou envio do Quiz pode disparar o evento <code>Lead</code> para otimizar o algoritmo da Meta.
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TAB 4: GOOGLE ADS & GOOGLE MEU NEGÓCIO -->
+        <div class="admin-pane" id="admPane-google">
+            <div class="ads-grid">
+                <div class="ads-box">
+                    <h3 style="color:var(--gold-light);margin-bottom:12px;">📍 Google Meu Negócio & Gerador de Avaliação 5⭐</h3>
+                    <p style="font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:16px;">Envie a mensagem abaixo após cada visita presencial. Avaliações que citam o nome do bairro colocam o Godoy no topo do Google Maps gratuitamente.</p>
+                    <div class="admin-input-group">
+                        <label>Nome do Cliente Atendido</label>
+                        <input type="text" id="gmbClientName" placeholder="Ex: Carlos Eduardo" oninput="updateGmbMessage()">
+                    </div>
+                    <div class="admin-input-group">
+                        <label>Bairro Visitado (Palavra-Chave de SEO Local)</label>
+                        <input type="text" id="gmbBairro" placeholder="Ex: Morada de Laranjeiras, Serra" value="Morada de Laranjeiras, Serra" oninput="updateGmbMessage()">
+                    </div>
+                    <div class="admin-input-group">
+                        <label>Mensagem Pronta para Enviar no WhatsApp do Cliente</label>
+                        <textarea id="gmbReviewMsg" rows="4" readonly></textarea>
+                    </div>
+                    <button class="btn btn-gold" style="width:100%;" onclick="sendGmbReviewRequest()">💬 Copiar / Enviar Pedido de Avaliação</button>
+                </div>
+
+                <div class="ads-box">
+                    <h3 style="color:var(--gold-light);margin-bottom:12px;">🔍 Palavras-Chave de Intenção de Compra (Google Ads)</h3>
+                    <p style="font-size:13px;color:rgba(255,255,255,0.75);margin-bottom:14px;">Estrutura de grupos de anúncios na Rede de Pesquisa focada em quem já está pronto para comprar na Grande Vitória:</p>
+                    <div class="admin-table-wrap">
+                        <table class="admin-table">
+                            <thead>
+                                <tr>
+                                    <th>Palavra-Chave (Pesquisa Exata/Frase)</th>
+                                    <th>Intenção</th>
+                                    <th>CPC Estimado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><code>"apartamento a venda morada de laranjeiras"</code></td>
+                                    <td>🔥 Alta (Fundo de Funil)</td>
+                                    <td>R$ 1,85</td>
+                                </tr>
+                                <tr>
+                                    <td><code>"apartamento manguinhos serra es"</code></td>
+                                    <td>🔥 Alta (Fundo de Funil)</td>
+                                    <td>R$ 1,60</td>
+                                </tr>
+                                <tr>
+                                    <td><code>"casa em condominio fechado serra es"</code></td>
+                                    <td>🔥 Alta (Ticket Médio/Alto)</td>
+                                    <td>R$ 2,40</td>
+                                </tr>
+                                <tr>
+                                    <td><code>"corretor de imoveis de confianca serra"</code></td>
+                                    <td>⭐ Institucional / Captura</td>
+                                    <td>R$ 1,20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div>
+            <div style="font-family:'Playfair Display',serif;font-size:22px;margin-bottom:10px;color:var(--white);">GODOY <span style="color:var(--gold);">CORRETOR</span></div>
+            <p style="font-size:13px;opacity:0.75;max-width:420px;">Eder Godoy · CRECI 15775-F. Consultoria imobiliária com atendimento direto na Serra, Vitória, Vila Velha e Litoral Capixaba. Do primeiro filtro à entrega das chaves.</p>
+        </div>
+        <div>
+            <h4>Navegação Rápida</h4>
+            <ul>
+                <li><a href="#imoveis" onclick="switchView('storefront')">Vitrine de Imóveis</a></li>
+                <li><a href="#mapa" onclick="switchView('storefront')">Mapa da Grande Vitória</a></li>
+                <li><a href="#simulador" onclick="switchView('storefront')">Simulador Caixa / SBPE</a></li>
+                <li><a href="#curadoria" onclick="switchView('storefront')">Anunciar Meu Imóvel</a></li>
+                <li><a href="#" onclick="toggleAdminView(); return false;">⚡ Painel Gestor (CRM)</a></li>
+            </ul>
+        </div>
+        <div>
+            <h4>Atendimento Direto</h4>
+            <ul>
+                <li><a href="#" target="_blank" class="js-wpp" data-msg="Olá Godoy! Vim pelo site.">📱 (27) 99904-2024</a></li>
+                <li><a href="https://instagram.com/godoy_corretor31" target="_blank">📸 @godoy_corretor31</a></li>
+                <li><a href="#contato" onclick="switchView('storefront')">✉️ Formulário Prioritário</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>© 2026 Godoy Corretor · Eder Godoy · CRECI 15775-F · Grande Vitória / ES. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<!-- MOBILE APP STICKY BOTTOM BAR -->
+<div class="mobile-bottom-bar">
+    <button class="mob-tab" onclick="switchView('storefront'); location.href='#imoveis'"><span class="ico">🏠</span><span>Imóveis</span></button>
+    <button class="mob-tab" onclick="switchView('storefront'); location.href='#mapa'"><span class="ico">🗺️</span><span>Mapa ES</span></button>
+    <button class="mob-tab" onclick="switchView('storefront'); location.href='#simulador'"><span class="ico">🧮</span><span>Simular</span></button>
+    <button class="mob-tab" onclick="toggleAdminView()"><span class="ico">⚡</span><span>CRM</span></button>
+    <a class="mob-tab highlight js-wpp" href="#" target="_blank" data-msg="Olá Godoy! Estou navegando pelo celular e quero atendimento.">💬 WhatsApp</a>
+</div>
+
+<!-- WHATSAPP FLOAT -->
+<a href="#" target="_blank" class="wpp-float js-wpp" data-msg="Olá Godoy! Vim pelo seu site." aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- PROPERTY DETAIL MODAL -->
+<div class="modal-overlay" id="propModal">
+    <div class="modal">
+        <button class="modal-close" onclick="closeModal()">✕</button>
+        <div class="modal-gallery" id="modalGallery"></div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding:8px 28px 0;">
+            <button class="btn btn-outline" style="padding:6px 14px;font-size:12px;" onclick="galleryPrev()">‹ Anterior</button>
+            <div class="gallery-dots" id="galleryDots"></div>
+            <button class="btn btn-outline" style="padding:6px 14px;font-size:12px;" onclick="galleryNext()">Próxima ›</button>
+        </div>
+        <p style="text-align:center;font-size:11px;color:var(--graphite-mid);margin-top:4px;">🔍 Clique na imagem para ampliar em tela cheia</p>
+        <div class="modal-body" id="modalBody"></div>
+    </div>
+</div>
+
+<!-- FULLSCREEN PHOTO VIEWER -->
+<div class="lightbox-overlay" id="lightboxOverlay" onclick="if(event.target===this) closeLightbox()">
+    <button class="lightbox-close" onclick="closeLightbox()" aria-label="Fechar">✕</button>
+    <button class="lightbox-nav lightbox-prev" onclick="lightboxPrev()" aria-label="Foto anterior">‹</button>
+    <img id="lightboxImg" src="" alt="Foto ampliada">
+    <button class="lightbox-nav lightbox-next" onclick="lightboxNext()" aria-label="Próxima foto">›</button>
+    <div class="lightbox-counter" id="lightboxCounter"></div>
+</div>
+
+<!-- TOAST FEEDBACK -->
+<div class="toast-msg" id="toastMsg"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
+
